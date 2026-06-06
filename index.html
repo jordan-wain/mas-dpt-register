@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAS DPT Licensed Entities — Singapore</title>
+<title>MAS DPT Register — Singapore</title>
 <style>
 :root{--bg:#fff;--fg:#0a0a0a;--card:#fff;--card-fg:#0a0a0a;--muted:#f4f4f5;--muted-fg:#71717a;
 --primary:#2563eb;--primary-fg:#fff;--destructive:#ef4444;--success:#22c55e;--warning:#f59e0b;
@@ -30,14 +30,19 @@ box-shadow:0 0 0 1px color-mix(in srgb,var(--fg) 10%,transparent)}.card>*+*{marg
 .text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem}
 .font-medium{font-weight:500}.font-semibold{font-weight:600}.font-bold{font-weight:700}
 .tracking-tight{letter-spacing:-.025em}.uppercase{text-transform:uppercase}
-.text-center{text-align:center}.mt-1{margin-top:.25rem}
+.text-center{text-align:center}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}
 .text-muted{color:var(--muted-fg)}.text-primary{color:var(--primary)}
-.text-success{color:var(--success)}.bg-muted{background:var(--muted)}
+.text-success{color:var(--success)}.text-destructive{color:var(--destructive)}
+.text-warning{color:var(--warning)}.bg-muted{background:var(--muted)}
 .border-b{border-bottom:1px solid var(--border)}.overflow-x{overflow-x:auto}
 .pill{display:inline-block;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:500}
 .pill-green{background:color-mix(in srgb,var(--success) 10%,transparent);color:var(--success);
 box-shadow:0 0 0 1px color-mix(in srgb,var(--success) 20%,transparent)}
 .pill-blue{background:color-mix(in srgb,var(--primary) 10%,transparent);color:var(--primary)}
+.pill-warn{background:color-mix(in srgb,var(--warning) 10%,transparent);color:var(--warning);
+box-shadow:0 0 0 1px color-mix(in srgb,var(--warning) 20%,transparent)}
+.pill-red{background:color-mix(in srgb,var(--destructive) 10%,transparent);color:var(--destructive);
+box-shadow:0 0 0 1px color-mix(in srgb,var(--destructive) 20%,transparent)}
 .entity-row:hover{background:var(--muted)}.sort-btn{cursor:pointer;user-select:none}
 .search-box{width:100%;padding:8px 12px;border-radius:6px;border:1px solid var(--input);
 background:var(--bg);color:var(--fg);font-size:14px}
@@ -48,50 +53,98 @@ border:1px solid var(--border);background:var(--card);color:var(--fg);transition
 .notable-card{border-radius:.5rem;padding:.75rem;background:var(--bg);
 box-shadow:0 0 0 1px color-mix(in srgb,var(--fg) 10%,transparent);transition:transform .1s}
 .notable-card:hover{transform:translateY(-2px)}
+.exempt-card{border-left:3px solid var(--warning);border-radius:.5rem;background:var(--bg);padding:.75rem}
+.exempt-card>*+*{margin-top:.25rem}
+.nle-card{border-left:3px solid var(--destructive);border-radius:.5rem;background:var(--bg);padding:.75rem}
+.nle-card>*+*{margin-top:.25rem}
 .section-toggle{cursor:pointer;user-select:none;display:flex;align-items:center;gap:8px}
 .section-toggle .chevron{transition:transform .2s;font-size:12px}
 .section-toggle.collapsed .chevron{transform:rotate(-90deg)}
 .collapsible{overflow:hidden;transition:max-height .3s}.collapsible.collapsed{max-height:0!important}
+.tab-btn{cursor:pointer;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:500;border:none;transition:.15s}
+.tab-btn.active{background:var(--primary);color:var(--primary-fg)}
+.tab-btn:not(.active){background:var(--muted);color:var(--muted-fg)}
+.tab-btn:not(.active):hover{background:color-mix(in srgb,var(--muted) 80%,var(--fg))}
+.tab-content{display:none}.tab-content.active{display:block}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="flex justify-between" style="align-items:flex-start;flex-wrap:wrap;gap:1rem">
     <div><h1 class="text-3xl font-bold tracking-tight">🇸🇬 MAS DPT Register</h1>
-    <p class="text-muted mt-1">Digital Payment Token Service Licensees · Singapore · 2026-06-06</p></div>
+    <p class="text-muted mt-1">Digital Payment Token Service · Singapore · 2026-06-06</p></div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.25rem">
       <span class="pill pill-green">Live Data</span>
       <a href="https://eservices.mas.gov.sg/fid/institution?sector=Payments&category=Major%20Payment%20Institution" target="_blank" class="text-xs text-primary">Source: MAS FID →</a>
     </div>
   </div>
 
+  <!-- KPIs -->
   <div class="grid g3">
-    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">DPT Licensees</span><span class="text-2xl font-bold mt-1">37</span><span class="text-xs text-muted">Major Payment Institutions</span></div>
-    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">Licence Type</span><span class="text-2xl font-bold mt-1 text-primary">MPI</span><span class="text-xs text-muted">Major Payment Institution</span></div>
-    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">Activity</span><span class="text-2xl font-bold mt-1" style="font-size:1rem">Digital Payment Token</span><span class="text-xs text-muted">Under Payment Services Act 2019</span></div>
+    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">Licensed</span><span class="text-2xl font-bold mt-1 text-success">37</span><span class="text-xs text-muted">Major Payment Institutions</span></div>
+    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">Exempt (Pending)</span><span class="text-2xl font-bold mt-1 text-warning">9</span><span class="text-xs text-muted">Awaiting licence decision</span></div>
+    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">No Longer Exempt</span><span class="text-2xl font-bold mt-1 text-destructive">33</span><span class="text-xs text-muted">Lost exemption / not licensed</span></div>
   </div>
 
-  <!-- Notable -->
+  <!-- Graduated -->
+  <div class="card" id="gradCard" style="display:none">
+    <div class="flex items-center gap-2"><h2 class="text-lg font-semibold">🎓 Graduated to Full Licence</h2><span class="pill pill-green" id="gradBadge"></span></div>
+    <p class="text-sm text-muted">Entities that moved from exempt status to a full MAS licence</p>
+    <div class="grid g2" id="gradCards"></div>
+  </div>
+
+  <!-- Notable licensed -->
   <div class="card">
-    <h2 class="text-lg font-semibold">Notable Licensees</h2>
-    <p class="text-sm text-muted">Major global exchanges and fintechs licensed for DPT services in Singapore</p>
+    <h2 class="text-lg font-semibold">Notable Licensed Entities</h2>
+    <p class="text-sm text-muted">Major global exchanges and fintechs licensed for DPT in Singapore</p>
     <div class="grid g3" id="nCards"></div>
   </div>
 
-  <!-- Full table -->
-  <h2 class="text-lg font-semibold">All DPT Licensees (37)</h2>
-  <div style="margin-bottom:.5rem"><input type="text" id="search" class="search-box" placeholder="Search by name…" oninput="filter()"></div>
-  <div class="text-sm text-muted" id="cnt"></div>
-  <div class="card" style="padding:0;overflow:hidden">
-    <div class="overflow-x">
-      <table class="text-sm"><thead><tr class="border-b bg-muted" style="text-align:left">
-        <th style="padding:.5rem .75rem" class="text-muted">#</th>
-        <th style="padding:.5rem .75rem" class="sort-btn text-muted" onclick="sort('name')">Entity ⇅</th>
-        <th style="padding:.5rem .75rem" class="text-muted">Website</th>
-        <th style="padding:.5rem .75rem" class="text-muted">Address</th>
-      </tr></thead><tbody id="tbody"></tbody></table>
+  <!-- Pipeline chart -->
+  <div class="grid g2">
+    <div class="card"><h2 class="text-sm font-semibold">Licensing Pipeline</h2><div style="max-width:280px;margin:0 auto"><canvas id="pipeChart"></canvas></div></div>
+    <div class="card"><h2 class="text-sm font-semibold">Exempt PSPs — Pending Licence</h2>
+      <p class="text-xs text-muted">Operating under temporary exemption while MAS reviews their application. Not supervised by MAS for these services.</p>
+      <div id="exemptCards" style="display:flex;flex-direction:column;gap:.5rem;margin-top:.5rem"></div>
     </div>
-    <div style="padding:.75rem" id="showMore"></div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="flex gap-2 flex-wrap">
+    <button class="tab-btn active" onclick="showTab('licensed',this)">Licensed (37)</button>
+    <button class="tab-btn" onclick="showTab('nle',this)">No Longer Exempt (33)</button>
+  </div>
+
+  <!-- Licensed tab -->
+  <div id="tab-licensed" class="tab-content active">
+    <div style="margin-bottom:.5rem"><input type="text" id="search" class="search-box" placeholder="Search by name…" oninput="filter()"></div>
+    <div class="text-sm text-muted" id="cnt"></div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="overflow-x">
+        <table class="text-sm"><thead><tr class="border-b bg-muted" style="text-align:left">
+          <th style="padding:.5rem .75rem" class="text-muted">#</th>
+          <th style="padding:.5rem .75rem" class="sort-btn text-muted" onclick="sort('name')">Entity ⇅</th>
+          <th style="padding:.5rem .75rem" class="text-muted">Website</th>
+          <th style="padding:.5rem .75rem" class="text-muted">Address</th>
+        </tr></thead><tbody id="tbody"></tbody></table>
+      </div>
+      <div style="padding:.75rem" id="showMore"></div>
+    </div>
+  </div>
+
+  <!-- No longer exempt tab -->
+  <div id="tab-nle" class="tab-content">
+    <p class="text-sm text-muted" style="margin-bottom:.75rem">Entities previously granted a DPT exemption that are <strong>no longer exempt and not licensed</strong>. These firms are not permitted to provide DPT services.</p>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="overflow-x">
+        <table class="text-sm"><thead><tr class="border-b bg-muted" style="text-align:left">
+          <th style="padding:.5rem .75rem" class="text-muted">#</th>
+          <th style="padding:.5rem .75rem" class="text-muted">Entity</th>
+          <th style="padding:.5rem .75rem" class="text-muted">Status</th>
+        </tr></thead><tbody id="nleTbody"></tbody></table>
+      </div>
+      <div style="padding:.75rem" id="nleMore"></div>
+    </div>
   </div>
 
   <!-- Pipeline -->
@@ -99,46 +152,80 @@ box-shadow:0 0 0 1px color-mix(in srgb,var(--fg) 10%,transparent);transition:tra
     <div class="section-toggle" onclick="toggleSection('pipeline')"><span class="chevron">▼</span><h2 class="text-lg font-semibold">How This Report Is Generated</h2></div>
     <div class="collapsible collapsed" id="pipeline-section">
       <div class="text-sm" style="padding:.5rem 1rem">
-        <p style="margin-bottom:.5rem"><strong>1.</strong> Query MAS Financial Institutions Directory API with DPT activity filter</p>
-        <p style="margin-bottom:.5rem"><strong>2.</strong> Paginate through all results (10 per page)</p>
-        <p style="margin-bottom:.5rem"><strong>3.</strong> Extract entity name, website, phone, address from HTML partials</p>
+        <p style="margin-bottom:.5rem"><strong>1.</strong> Query MAS Financial Institutions Directory API — filter to Major Payment Institutions with DPT activity</p>
+        <p style="margin-bottom:.5rem"><strong>2.</strong> Paginate through all results to get the full licensed entity list</p>
+        <p style="margin-bottom:.5rem"><strong>3.</strong> Compare licensed list against exempt entity seed data to detect graduations</p>
         <p style="margin-bottom:.5rem"><strong>4.</strong> Diff against previous snapshot for new/removed licensees</p>
         <p style="margin-bottom:.5rem"><strong>5.</strong> Generate this HTML and push to GitHub Pages</p>
         <div class="border-b" style="margin:.75rem 0"></div>
-        <p class="text-muted">Workflow: <code>mas-dpt-register-monitor</code> · Auto-published weekly</p>
+        <p class="text-muted"><strong>Note:</strong> Exempt entity data is manually seeded from MAS website screenshots (the MAS website is a client-rendered SPA that cannot be scraped). Licensed data is scraped live from the MAS FID API on every run.</p>
+        <p class="text-muted mt-2">Workflow: <code>mas-dpt-register-monitor</code> · Auto-published weekly</p>
       </div>
     </div>
   </div>
 
-  <p class="text-xs text-muted text-center">Data: MAS Financial Institutions Directory · Workflow: <code>mas-dpt-register-monitor</code> · Updated 2026-06-06</p>
+  <p class="text-xs text-muted text-center">Data: MAS Financial Institutions Directory + MAS PS Act exempt entity lists · Workflow: <code>mas-dpt-register-monitor</code> · Updated 2026-06-06</p>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script>
-const E=[{"name": "ANCHORAGE DIGITAL SINGAPORE Pte. Ltd.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/427752-ANCHORAGE-DIGITAL-SINGAPORE-Pte-Ltd", "website": "", "phone": "-", "address": "9 RAFFLES PLACE #26-01 REPUBLIC PLAZA 048619"}, {"name": "BITGO SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420728-BITGO-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "9 RAFFLES PLACE, #26-01, REPUBLIC PLAZA 048619"}, {"name": "BITSTAMP ASIA PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/254459-BITSTAMP-ASIA-PTE-LTD", "website": "http://www.bitstamp.net", "phone": "-", "address": "50 RAFFLES PLACE 63 CHULIA STREET, #15-01, OCBC CENTRE EAST 049514"}, {"name": "BLOCKCHAIN.COM (SINGAPORE) PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/409117-BLOCKCHAIN-COM-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "65, CHULIA STREET #41-08 OCBC CENTRE 049513"}, {"name": "CIRCLE INTERNET SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/412248-CIRCLE-INTERNET-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "1, MARINA BOULEVARD #28-00 ONE MARINA BOULEVARD 018989"}, {"name": "COINBASE SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/235467-COINBASE-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "21 COLLYER QUAY 049320"}, {"name": "DBS VICKERS SECURITIES (SINGAPORE) PTE LTD", "url": "https://eservices.mas.gov.sg/fid/institution/detail/447-DBS-VICKERS-SECURITIES-SINGAPORE-PTE-LTD", "website": "http://www.dbsvickers.com", "phone": "+65 63272288", "address": "12 MARINA BOULEVARD #10-01 MARINA BAY FINANCIAL CENTRE TOWER 3 018982"}, {"name": "DIGITAL TREASURES CENTER PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/248348-DIGITAL-TREASURES-CENTER-PTE-LTD", "website": "https://dtcpay.com/", "phone": "+65 85000000", "address": "139 CECIL STREET #08-01 YSY BUILDING 069539"}, {"name": "FLY WING TECHNOLOGIES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/429969-FLY-WING-TECHNOLOGIES-PTE-LTD", "website": "https://www.flywing.com", "phone": "+65 62140195", "address": "8 KALLANG AVENUE #17-01/03 APERIA SINGAPORE 339509"}, {"name": "FOMO PAY PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/218716-FOMO-PAY-PTE-LTD", "website": "https://www.fomopay.com", "phone": "65 67158451", "address": "140 ROBINSON ROAD #17-02 TAHIR BUILDING 068907"}, {"name": "FORIS DAX ASIA PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/250069-FORIS-DAX-ASIA-PTE-LTD", "website": "", "phone": "+65 69784632", "address": "128 BEACH ROAD #27-03 GUOCO MIDTOWN OFFICE 189773"}, {"name": "GSR MARKETS PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/418768-GSR-MARKETS-PTE-LTD", "website": "", "phone": "-", "address": "6 SHENTON WAY #17-08 OUE DOWNTOWN 068809"}, {"name": "Hashkey Technology Services Pte. Ltd.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/422819-Hashkey-Technology-Services-Pte-Ltd", "website": "", "phone": "-", "address": "3 CHURCH STREET, #28-06 SAMSUNG HUB 049483"}, {"name": "HEX TECHNOLOGIES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/426705-HEX-TECHNOLOGIES-PTE-LTD", "website": "", "phone": "-", "address": "1 FINLAYSON GREEN #06-03 049246"}, {"name": "INDEPENDENT RESERVE SG PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/243463-INDEPENDENT-RESERVE-SG-PTE-LTD", "website": "http://www.independentreserve.com/sg", "phone": "+65 60110080", "address": "6 SHENTON WAY, #39-02 OUE DOWNTOWN 068809"}, {"name": "JST DIGITAL TRADING & TECHNOLOGY PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/426652-JST-DIGITAL-TRADING-TECHNOLOGY-PTE-LTD", "website": "https://jstdigital.io/", "phone": "-", "address": "23 CHURCH STREET, #07-08 CAPITAL SQUARE 049481"}, {"name": "METACOMP PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/408257-METACOMP-PTE-LTD", "website": "", "phone": "+65 69930182", "address": "168 ROBINSON ROAD #26-02 CAPITAL TOWER 068912"}, {"name": "MOOMOO FINANCIAL SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/235399-MOOMOO-FINANCIAL-SINGAPORE-PTE-LTD", "website": "https://www.moomoo.com/sg", "phone": "+65 64391100", "address": "10 MARINA BOULEVARD MBFC TOWER 2 #31-01 018983"}, {"name": "OKX SG PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/422854-OKX-SG-PTE-LTD", "website": "https://www.okx.com/en-sg", "phone": "+65 69322834", "address": "12 MARINA BOULEVARD #19-02, MARINA BAY FINANCIAL CENTRE 018982"}, {"name": "PAXOS DIGITAL SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420524-PAXOS-DIGITAL-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "48, TOH GUAN ROAD EAST #06-152 ENTERPRISE HUB 608586"}, {"name": "PAXOS GLOBAL PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/408012-PAXOS-GLOBAL-PTE-LTD", "website": "", "phone": "-", "address": "48 TOH GUAN ROAD EAST #06-152 ENTERPRISE HUB 608586"}, {"name": "PAYPAL PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/1488-PAYPAL-PTE-LTD", "website": "http://www.paypal.com", "phone": "+65 65104600", "address": "5 TEMASEK BOULEVARD #09-01 SUNTEC TOWER FIVE 038985"}, {"name": "QCP TRADING PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/429968-QCP-TRADING-PTE-LTD", "website": "https://qcpgroup.com", "phone": "+65 89071321", "address": "PRUDENTIAL TOWER 30 CECIL ST #12-01/08 049712"}, {"name": "REVOLUT TECHNOLOGIES SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/218707-REVOLUT-TECHNOLOGIES-SINGAPORE-PTE-LTD", "website": "https://www.revolut.com/en-SG", "phone": "+65 69298748", "address": "36 ROBINSON ROAD #20-01 CITY HOUSE 068877"}, {"name": "RIPPLE MARKETS APAC PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/415143-RIPPLE-MARKETS-APAC-PTE-LTD", "website": "", "phone": "-", "address": "77, ROBINSON ROAD #16-00 ROBINSON 77 068896"}, {"name": "SFOX PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/433728-SFOX-PTE-LTD", "website": "https://www.sfox.com/", "phone": "-", "address": "1 COLEMAN STREET #08-09A, THE ADELPHI 179803"}, {"name": "STRAITS MILLENNIUM PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/432581-STRAITS-MILLENNIUM-PTE-LTD", "website": "http://straitsfinancial.com/straits-millennium", "phone": "+65 66729669", "address": "38 TANJONG PENJURU CWT LOGISTICS HUB 1 609039"}, {"name": "STRAITSX PAYMENT SERVICES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420460-STRAITSX-PAYMENT-SERVICES-PTE-LTD", "website": "https://www.straitsx.com/en", "phone": "-", "address": "79, AYER RAJAH CRESCENT #04-08 139955"}, {"name": "STRAITSX SGD ISSUANCE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420461-STRAITSX-SGD-ISSUANCE-PTE-LTD", "website": "", "phone": "-", "address": "79, AYER RAJAH CRESCENT #04-08 139955"}, {"name": "STRAITSX USD ISSUANCE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420459-STRAITSX-USD-ISSUANCE-PTE-LTD", "website": "", "phone": "-", "address": "79, AYER RAJAH CRESCENT #04-08 139955"}, {"name": "SYGNUM PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/228260-SYGNUM-PTE-LTD", "website": "https://www.sygnum.com/sg/", "phone": "+65 60158808", "address": "3 FRASER STREET #04-22 DUO TOWER 189352"}, {"name": "UPBIT SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420457-UPBIT-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "1, HARBOURFRONT AVENUE #16-02 KEPPEL BAY TOWER 098632"}, {"name": "XREX PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420528-XREX-PTE-LTD", "website": "", "phone": "65 69149851", "address": "12 MARINA VIEW, #10-23, ASIA SQUARE TOWER 2 018961"}, {"name": "HAKO TECHNOLOGY PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/220377-HAKO-TECHNOLOGY-PTE-LTD", "website": "http://www.coinhako.com", "phone": "-", "address": ""}, {"name": "SPARROW TECH PRIVATE LIMITED", "url": "https://eservices.mas.gov.sg/fid/institution/detail/231164-SPARROW-TECH-PRIVATE-LIMITED", "website": "http://www.ambr.io/SGP", "phone": "+65 60220227", "address": ""}, {"name": "TRIPLE A TECHNOLOGIES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/233506-TRIPLE-A-TECHNOLOGIES-PTE-LTD", "website": "https://triple-a.io/", "phone": "-", "address": ""}, {"name": "XFERS PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/226546-XFERS-PTE-LTD", "website": "https://fazz.com/en/about/", "phone": "", "address": ""}];
+const L=[{"name": "ANCHORAGE DIGITAL SINGAPORE Pte. Ltd.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/427752-ANCHORAGE-DIGITAL-SINGAPORE-Pte-Ltd", "website": "", "phone": "-", "address": "9 RAFFLES PLACE #26-01 REPUBLIC PLAZA 048619"}, {"name": "BITGO SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420728-BITGO-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "9 RAFFLES PLACE, #26-01, REPUBLIC PLAZA 048619"}, {"name": "BITSTAMP ASIA PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/254459-BITSTAMP-ASIA-PTE-LTD", "website": "http://www.bitstamp.net", "phone": "-", "address": "50 RAFFLES PLACE 63 CHULIA STREET, #15-01, OCBC CENTRE EAST 049514"}, {"name": "BLOCKCHAIN.COM (SINGAPORE) PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/409117-BLOCKCHAIN-COM-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "65, CHULIA STREET #41-08 OCBC CENTRE 049513"}, {"name": "CIRCLE INTERNET SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/412248-CIRCLE-INTERNET-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "1, MARINA BOULEVARD #28-00 ONE MARINA BOULEVARD 018989"}, {"name": "COINBASE SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/235467-COINBASE-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "21 COLLYER QUAY 049320"}, {"name": "DBS VICKERS SECURITIES (SINGAPORE) PTE LTD", "url": "https://eservices.mas.gov.sg/fid/institution/detail/447-DBS-VICKERS-SECURITIES-SINGAPORE-PTE-LTD", "website": "http://www.dbsvickers.com", "phone": "+65 63272288", "address": "12 MARINA BOULEVARD #10-01 MARINA BAY FINANCIAL CENTRE TOWER 3 018982"}, {"name": "DIGITAL TREASURES CENTER PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/248348-DIGITAL-TREASURES-CENTER-PTE-LTD", "website": "https://dtcpay.com/", "phone": "+65 85000000", "address": "139 CECIL STREET #08-01 YSY BUILDING 069539"}, {"name": "FLY WING TECHNOLOGIES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/429969-FLY-WING-TECHNOLOGIES-PTE-LTD", "website": "https://www.flywing.com", "phone": "+65 62140195", "address": "8 KALLANG AVENUE #17-01/03 APERIA SINGAPORE 339509"}, {"name": "FOMO PAY PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/218716-FOMO-PAY-PTE-LTD", "website": "https://www.fomopay.com", "phone": "65 67158451", "address": "140 ROBINSON ROAD #17-02 TAHIR BUILDING 068907"}, {"name": "FORIS DAX ASIA PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/250069-FORIS-DAX-ASIA-PTE-LTD", "website": "", "phone": "+65 69784632", "address": "128 BEACH ROAD #27-03 GUOCO MIDTOWN OFFICE 189773"}, {"name": "GSR MARKETS PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/418768-GSR-MARKETS-PTE-LTD", "website": "", "phone": "-", "address": "6 SHENTON WAY #17-08 OUE DOWNTOWN 068809"}, {"name": "Hashkey Technology Services Pte. Ltd.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/422819-Hashkey-Technology-Services-Pte-Ltd", "website": "", "phone": "-", "address": "3 CHURCH STREET, #28-06 SAMSUNG HUB 049483"}, {"name": "HEX TECHNOLOGIES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/426705-HEX-TECHNOLOGIES-PTE-LTD", "website": "", "phone": "-", "address": "1 FINLAYSON GREEN #06-03 049246"}, {"name": "INDEPENDENT RESERVE SG PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/243463-INDEPENDENT-RESERVE-SG-PTE-LTD", "website": "http://www.independentreserve.com/sg", "phone": "+65 60110080", "address": "6 SHENTON WAY, #39-02 OUE DOWNTOWN 068809"}, {"name": "JST DIGITAL TRADING & TECHNOLOGY PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/426652-JST-DIGITAL-TRADING-TECHNOLOGY-PTE-LTD", "website": "https://jstdigital.io/", "phone": "-", "address": "23 CHURCH STREET, #07-08 CAPITAL SQUARE 049481"}, {"name": "METACOMP PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/408257-METACOMP-PTE-LTD", "website": "", "phone": "+65 69930182", "address": "168 ROBINSON ROAD #26-02 CAPITAL TOWER 068912"}, {"name": "MOOMOO FINANCIAL SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/235399-MOOMOO-FINANCIAL-SINGAPORE-PTE-LTD", "website": "https://www.moomoo.com/sg", "phone": "+65 64391100", "address": "10 MARINA BOULEVARD MBFC TOWER 2 #31-01 018983"}, {"name": "OKX SG PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/422854-OKX-SG-PTE-LTD", "website": "https://www.okx.com/en-sg", "phone": "+65 69322834", "address": "12 MARINA BOULEVARD #19-02, MARINA BAY FINANCIAL CENTRE 018982"}, {"name": "PAXOS DIGITAL SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420524-PAXOS-DIGITAL-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "48, TOH GUAN ROAD EAST #06-152 ENTERPRISE HUB 608586"}, {"name": "PAXOS GLOBAL PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/408012-PAXOS-GLOBAL-PTE-LTD", "website": "", "phone": "-", "address": "48 TOH GUAN ROAD EAST #06-152 ENTERPRISE HUB 608586"}, {"name": "PAYPAL PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/1488-PAYPAL-PTE-LTD", "website": "http://www.paypal.com", "phone": "+65 65104600", "address": "5 TEMASEK BOULEVARD #09-01 SUNTEC TOWER FIVE 038985"}, {"name": "QCP TRADING PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/429968-QCP-TRADING-PTE-LTD", "website": "https://qcpgroup.com", "phone": "+65 89071321", "address": "PRUDENTIAL TOWER 30 CECIL ST #12-01/08 049712"}, {"name": "REVOLUT TECHNOLOGIES SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/218707-REVOLUT-TECHNOLOGIES-SINGAPORE-PTE-LTD", "website": "https://www.revolut.com/en-SG", "phone": "+65 69298748", "address": "36 ROBINSON ROAD #20-01 CITY HOUSE 068877"}, {"name": "RIPPLE MARKETS APAC PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/415143-RIPPLE-MARKETS-APAC-PTE-LTD", "website": "", "phone": "-", "address": "77, ROBINSON ROAD #16-00 ROBINSON 77 068896"}, {"name": "SFOX PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/433728-SFOX-PTE-LTD", "website": "https://www.sfox.com/", "phone": "-", "address": "1 COLEMAN STREET #08-09A, THE ADELPHI 179803"}, {"name": "STRAITS MILLENNIUM PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/432581-STRAITS-MILLENNIUM-PTE-LTD", "website": "http://straitsfinancial.com/straits-millennium", "phone": "+65 66729669", "address": "38 TANJONG PENJURU CWT LOGISTICS HUB 1 609039"}, {"name": "STRAITSX PAYMENT SERVICES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420460-STRAITSX-PAYMENT-SERVICES-PTE-LTD", "website": "https://www.straitsx.com/en", "phone": "-", "address": "79, AYER RAJAH CRESCENT #04-08 139955"}, {"name": "STRAITSX SGD ISSUANCE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420461-STRAITSX-SGD-ISSUANCE-PTE-LTD", "website": "", "phone": "-", "address": "79, AYER RAJAH CRESCENT #04-08 139955"}, {"name": "STRAITSX USD ISSUANCE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420459-STRAITSX-USD-ISSUANCE-PTE-LTD", "website": "", "phone": "-", "address": "79, AYER RAJAH CRESCENT #04-08 139955"}, {"name": "SYGNUM PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/228260-SYGNUM-PTE-LTD", "website": "https://www.sygnum.com/sg/", "phone": "+65 60158808", "address": "3 FRASER STREET #04-22 DUO TOWER 189352"}, {"name": "UPBIT SINGAPORE PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420457-UPBIT-SINGAPORE-PTE-LTD", "website": "", "phone": "-", "address": "1, HARBOURFRONT AVENUE #16-02 KEPPEL BAY TOWER 098632"}, {"name": "XREX PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/420528-XREX-PTE-LTD", "website": "", "phone": "65 69149851", "address": "12 MARINA VIEW, #10-23, ASIA SQUARE TOWER 2 018961"}, {"name": "HAKO TECHNOLOGY PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/220377-HAKO-TECHNOLOGY-PTE-LTD", "website": "http://www.coinhako.com", "phone": "-", "address": ""}, {"name": "SPARROW TECH PRIVATE LIMITED", "url": "https://eservices.mas.gov.sg/fid/institution/detail/231164-SPARROW-TECH-PRIVATE-LIMITED", "website": "http://www.ambr.io/SGP", "phone": "+65 60220227", "address": ""}, {"name": "TRIPLE A TECHNOLOGIES PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/233506-TRIPLE-A-TECHNOLOGIES-PTE-LTD", "website": "https://triple-a.io/", "phone": "-", "address": ""}, {"name": "XFERS PTE. LTD.", "url": "https://eservices.mas.gov.sg/fid/institution/detail/226546-XFERS-PTE-LTD", "website": "https://fazz.com/en/about/", "phone": "", "address": ""}];
+const EX=[{"name": "ACHERON PTE. LTD.", "regulation": "Transitional Regulations 2024", "services": ["DPT"]}, {"name": "DBS DIGITAL EXCHANGE PTE. LTD. (DDEx)", "regulation": "Transitional Regulations 2024", "services": ["DPT"]}, {"name": "EDXM GLOBAL PTE. LTD.", "regulation": "Transitional Regulations 2024", "services": ["DPT"]}, {"name": "FALCONX FOXTROT PTE. LTD.", "regulation": "Transitional Regulations 2024", "services": ["DPT"]}, {"name": "FORIS DAX SG PTE. LTD.", "regulation": "Transitional Regulations 2024", "services": ["DPT"]}, {"name": "ZODIA CUSTODY (SINGAPORE) PTE LTD", "regulation": "Transitional Regulations 2024", "services": ["DPT"]}, {"name": "COINUT PTE. LTD.", "regulation": "Exemption Regulations 2019", "services": ["DPT"]}, {"name": "CUMBERLAND SG PTE. LTD.", "regulation": "Exemption Regulations 2019", "services": ["DPT"]}, {"name": "GEMINI DIGITAL PAYMENTS SINGAPORE, PTE. LTD.", "regulation": "Exemption Regulations 2019", "services": ["DPT"]}, {"name": "SFOX PTE LTD", "regulation": "Exemption Regulations 2019", "services": ["DPT"]}];
+const NLE=["AEGIS CUSTODY PTE. LTD.", "ALETA PLANET MES PTE LTD", "AMPLE TRANSFERS PTE. LTD.", "ANSWER ELEVEN PTE LTD", "ANTALPHA TECHNOLOGIES PTE. LTD.", "BLACKBIRD RESEARCH PTE. LTD.", "CAKE PTE. LTD.", "CEFFU SG PTE. LTD.", "CHAINUP CRYPTSAFE PTE. LTD.", "CLDN SG PTE LTD (fka Alphalab Capital Pte Ltd)", "COBO SINGAPORE PTE. LTD.", "CYBAVO PTE. LTD.", "FINMO TECH PTE. LTD.", "GOLDNEST PTE LTD", "GPAY NETWORK (S) PTE LTD", "HASHKEY DIGITAL WEALTH PTE. LTD.", "HEADQUARTERS XYZ PTE LTD", "HERRING TECHNOLOGY SERVICES PTE. LTD.", "HYDRAX DIGITAL ASSETS PTE LTD", "IPAYMY TECHNOLOGIES PTE. LTD.", "KUN DIGITAL TECHNOLOGY PTE. LTD.", "MAINNET DIGITAL PTE. LTD.", "MATRIX TRUST PTE. LTD.", "METABORA SINGAPORE PTE. LTD.", "MILLENING PTE. LTD.", "NIUM PTE LTD", "PAYSTREET PTE. LTD.", "PRIMROSE CAPITAL MANAGEMENT PTE. LTD.", "PROPINE MARKET SERVICES PTE. LTD.", "PROPINE TECHNOLOGIES PTE. LTD.", "RAKKAR DIGITAL PTE. LTD.", "REMSEA PTE. LTD.", "RENORA TECHNOLOGIES PTE. LTD."];
+const GR=["SFOX PTE LTD"];
 const NOTABLE=[
-  {m:"coinbase",l:"Coinbase",i:"🇺🇸"},{m:"crypto.com",l:"Crypto.com",i:"🇸🇬"},
-  {m:"foris dax",l:"Crypto.com",i:"🇸🇬"},{m:"okx",l:"OKX",i:"🇸🇬"},
-  {m:"revolut",l:"Revolut",i:"🇬🇧"},{m:"paypal",l:"PayPal",i:"🇺🇸"},
-  {m:"bitstamp",l:"Bitstamp",i:"🇱🇺"},{m:"circle",l:"Circle",i:"🇺🇸"},
-  {m:"bitgo",l:"BitGo",i:"🇺🇸"},{m:"anchorage",l:"Anchorage Digital",i:"🇺🇸"},
-  {m:"ripple",l:"Ripple",i:"🇺🇸"},{m:"sygnum",l:"Sygnum",i:"🇨🇭"},
-  {m:"paxos",l:"Paxos",i:"🇺🇸"},{m:"dbs vickers",l:"DBS Vickers",i:"🇸🇬"},
-  {m:"moomoo",l:"Moomoo",i:"🇸🇬"},{m:"independent reserve",l:"Independent Reserve",i:"🇦🇺"},
+  {m:"coinbase",l:"Coinbase",i:"🇺🇸"},{m:"foris dax asia",l:"Crypto.com",i:"🇸🇬"},
+  {m:"okx",l:"OKX",i:"🇸🇬"},{m:"revolut",l:"Revolut",i:"🇬🇧"},
+  {m:"paypal",l:"PayPal",i:"🇺🇸"},{m:"bitstamp",l:"Bitstamp",i:"🇱🇺"},
+  {m:"circle",l:"Circle",i:"🇺🇸"},{m:"bitgo",l:"BitGo",i:"🇺🇸"},
+  {m:"anchorage",l:"Anchorage Digital",i:"🇺🇸"},{m:"ripple",l:"Ripple",i:"🇺🇸"},
+  {m:"sygnum",l:"Sygnum",i:"🇨🇭"},{m:"paxos",l:"Paxos",i:"🇺🇸"},
+  {m:"dbs vickers",l:"DBS Vickers",i:"🇸🇬"},{m:"moomoo",l:"Moomoo",i:"🇸🇬"},
+  {m:"independent reserve",l:"Independent Reserve",i:"🇦🇺"},
   {m:"upbit",l:"Upbit",i:"🇰🇷"},{m:"coinhako",l:"Coinhako",i:"🇸🇬"},
   {m:"blockchain.com",l:"Blockchain.com",i:"🇬🇧"},{m:"hashkey",l:"HashKey",i:"🇭🇰"},
 ];
 function toggleSection(id){const s=document.getElementById(id+'-section');s.classList.toggle('collapsed');
 s.closest('.card').querySelector('.section-toggle').classList.toggle('collapsed')}
+function showTab(t,b){document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));
+document.querySelectorAll('.tab-btn').forEach(e=>e.classList.remove('active'));
+document.getElementById('tab-'+t).classList.add('active');b.classList.add('active')}
+
+// Graduated
+if(GR.length){document.getElementById('gradCard').style.display='';
+document.getElementById('gradBadge').textContent=GR.length+' graduated';
+document.getElementById('gradCards').innerHTML=GR.map(g=>`<div class="exempt-card" style="border-left-color:var(--success)"><div class="flex items-center gap-2"><span class="font-medium">${g}</span><span class="pill pill-green">Licensed ✓</span></div><div class="text-xs text-muted">Previously exempt → now holds full MAS licence</div></div>`).join('')}
 
 // Notable
 !function(){const c=document.getElementById('nCards'),found=[],seen=new Set();
-for(const n of NOTABLE)for(const e of E){if(e.name.toLowerCase().includes(n.m)&&!seen.has(n.m)){
+for(const n of NOTABLE)for(const e of L){if(e.name.toLowerCase().includes(n.m)&&!seen.has(n.m)){
 seen.add(n.m);found.push({...e,icon:n.i,dn:n.l});break}}
 c.innerHTML=found.map(e=>{const ws=e.website?`<a href="${e.website}" target="_blank" class="text-xs text-primary">${e.website.replace(/https?:\/\//,'')}</a>`:'';
 return`<div class="notable-card"><div class="flex items-center gap-2"><span class="text-lg">${e.icon}</span>
 <div><div class="font-medium text-sm">${e.dn}</div><div class="text-xs text-muted">${e.name}</div>
 ${ws}</div></div></div>`}).join('')}();
 
-// Table
+// Exempt cards
+!function(){const grSet=new Set(GR.map(g=>g.toLowerCase()));
+const pending=EX.filter(e=>!grSet.has(e.name.toLowerCase()));
+document.getElementById('exemptCards').innerHTML=pending.map(e=>
+`<div class="exempt-card"><div class="flex justify-between items-center">
+<span class="font-medium text-sm">${e.name}</span>
+<span class="pill pill-warn">Exempt</span></div>
+<div class="text-xs text-muted">${e.regulation}</div></div>`).join('')}();
+
+// Pipeline chart
+const cs=getComputedStyle(document.documentElement);
+const c1=cs.getPropertyValue('--chart-1').trim(),c2=cs.getPropertyValue('--chart-2').trim(),
+c3=cs.getPropertyValue('--chart-3').trim(),c5=cs.getPropertyValue('--chart-5').trim();
+const mfg=cs.getPropertyValue('--muted-fg').trim()||'#71717a';
+Chart.defaults.color=mfg;
+new Chart(document.getElementById('pipeChart'),{type:'doughnut',data:{
+labels:['Licensed ('+L.length+')','Pending ('+EX.filter(e=>!new Set(GR.map(g=>g.toLowerCase())).has(e.name.toLowerCase())).length+')','Lost Exemption ('+NLE.length+')'],
+datasets:[{data:[L.length,EX.filter(e=>!new Set(GR.map(g=>g.toLowerCase())).has(e.name.toLowerCase())).length,NLE.length],
+backgroundColor:[c2+'CC',c1+'CC',c5+'CC'],borderWidth:0}]},
+options:{cutout:'60%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,padding:8,font:{size:11}}}}}});
+
+// Licensed table
 let sK='name',sD=1,flt=[],sN=15;
 function render(){const tb=document.getElementById('tbody'),v=flt.slice(0,sN);
 tb.innerHTML=v.map((e,i)=>{const ws=e.website?`<a href="${e.website}" target="_blank" class="text-primary">${e.website.replace(/https?:\/\//,'').slice(0,30)}</a>`:'—';
@@ -146,15 +233,27 @@ return`<tr class="entity-row border-b">
 <td style="padding:.5rem .75rem" class="text-muted">${i+1}</td>
 <td style="padding:.5rem .75rem"><a href="${e.url}" target="_blank" class="text-primary">${e.name}</a></td>
 <td style="padding:.5rem .75rem">${ws}</td>
-<td style="padding:.5rem .75rem text-muted text-xs">${e.address||'—'}</td></tr>`}).join('');
+<td style="padding:.5rem .75rem" class="text-muted text-xs">${e.address||'—'}</td></tr>`}).join('');
 document.getElementById('cnt').textContent=`Showing ${Math.min(sN,flt.length)} of ${flt.length}`;
 const mc=document.getElementById('showMore');
 if(sN<flt.length){const r=flt.length-sN;mc.innerHTML=`<button class="show-more-btn" onclick="sN+=15;render()">Show ${Math.min(r,15)} more (${r} remaining)</button>`}
 else mc.innerHTML=flt.length>15?`<button class="show-more-btn" onclick="sN=15;render()">Collapse</button>`:''}
 function filter(){const q=document.getElementById('search').value.toLowerCase();
-flt=E.filter(e=>!q||e.name.toLowerCase().includes(q)).sort((a,b)=>a[sK].localeCompare(b[sK])*sD);sN=15;render()}
+flt=L.filter(e=>!q||e.name.toLowerCase().includes(q)).sort((a,b)=>a[sK].localeCompare(b[sK])*sD);sN=15;render()}
 function sort(k){if(sK===k)sD*=-1;else{sK=k;sD=1}filter()}
-filter();
+
+// NLE table
+let nleN=15;
+function renderNLE(){const tb=document.getElementById('nleTbody');const v=NLE.slice(0,nleN);
+tb.innerHTML=v.map((n,i)=>`<tr class="entity-row border-b">
+<td style="padding:.5rem .75rem" class="text-muted">${i+1}</td>
+<td style="padding:.5rem .75rem">${n}</td>
+<td style="padding:.5rem .75rem"><span class="pill pill-red">Exemption lost</span></td></tr>`).join('');
+const mc=document.getElementById('nleMore');
+if(nleN<NLE.length){const r=NLE.length-nleN;mc.innerHTML=`<button class="show-more-btn" onclick="nleN+=15;renderNLE()">Show ${Math.min(r,15)} more (${r} remaining)</button>`}
+else mc.innerHTML=NLE.length>15?`<button class="show-more-btn" onclick="nleN=15;renderNLE()">Collapse</button>`:''}
+
+filter();renderNLE();
 </script>
 </body>
 </html>
