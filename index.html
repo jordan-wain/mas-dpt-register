@@ -23,6 +23,7 @@ table{border-collapse:collapse;width:100%}
 @media(max-width:768px){.g3,.g2{grid-template-columns:1fr}}
 .card{background:var(--card);color:var(--card-fg);border-radius:.75rem;padding:1rem;
 box-shadow:0 0 0 1px color-mix(in srgb,var(--fg) 10%,transparent)}.card>*+*{margin-top:.75rem}
+.kpi{display:flex;flex-direction:column}
 .flex{display:flex}.flex-col{flex-direction:column}.items-center{align-items:center}
 .justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-3{gap:.75rem}
 .flex-wrap{flex-wrap:wrap}.flex-1{flex:1}
@@ -81,16 +82,14 @@ box-shadow:0 0 0 1px color-mix(in srgb,var(--fg) 10%,transparent);transition:tra
 
   <!-- KPIs -->
   <div class="grid g3">
-    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">Licensed</span><span class="text-2xl font-bold mt-1 text-success">37</span><span class="text-xs text-muted">Major Payment Institutions</span></div>
-    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">Exempt (Pending)</span><span class="text-2xl font-bold mt-1 text-warning">9</span><span class="text-xs text-muted">Awaiting licence decision</span></div>
-    <div class="card flex-col"><span class="text-xs font-medium text-muted uppercase tracking-tight">No Longer Exempt</span><span class="text-2xl font-bold mt-1 text-destructive">33</span><span class="text-xs text-muted">Lost exemption / not licensed</span></div>
+    <div class="card kpi"><span class="text-xs font-medium text-muted uppercase tracking-tight">Licensed</span><span class="text-2xl font-bold mt-1 text-success">37</span><span class="text-xs text-muted">Major Payment Institutions</span></div>
+    <div class="card kpi"><span class="text-xs font-medium text-muted uppercase tracking-tight">Exempt (Pending)</span><span class="text-2xl font-bold mt-1 text-warning">9</span><span class="text-xs text-muted">Awaiting licence decision</span></div>
+    <div class="card kpi"><span class="text-xs font-medium text-muted uppercase tracking-tight">No Longer Exempt</span><span class="text-2xl font-bold mt-1 text-destructive">33</span><span class="text-xs text-muted">Lost exemption / not licensed</span></div>
   </div>
 
-  <!-- Graduated -->
+  <!-- Graduated (inline mention if any) -->
   <div class="card" id="gradCard" style="display:none">
-    <div class="flex items-center gap-2"><h2 class="text-lg font-semibold">🎓 Graduated to Full Licence</h2><span class="pill pill-green" id="gradBadge"></span></div>
-    <p class="text-sm text-muted">Entities that moved from exempt status to a full MAS licence</p>
-    <div class="grid g2" id="gradCards"></div>
+    <div class="flex items-center gap-3"><span class="text-sm font-semibold">Graduated to full licence:</span><span id="gradNames" class="text-sm"></span><span class="pill pill-green" id="gradBadge"></span></div>
   </div>
 
   <!-- Notable licensed -->
@@ -98,6 +97,7 @@ box-shadow:0 0 0 1px color-mix(in srgb,var(--fg) 10%,transparent);transition:tra
     <h2 class="text-lg font-semibold">Notable Licensed Entities</h2>
     <p class="text-sm text-muted">Major global exchanges and fintechs licensed for DPT in Singapore</p>
     <div class="grid g3" id="nCards"></div>
+    <div id="nMore"></div>
   </div>
 
   <!-- Pipeline chart -->
@@ -192,17 +192,21 @@ document.getElementById('tab-'+t).classList.add('active');b.classList.add('activ
 
 // Graduated
 if(GR.length){document.getElementById('gradCard').style.display='';
-document.getElementById('gradBadge').textContent=GR.length+' graduated';
-document.getElementById('gradCards').innerHTML=GR.map(g=>`<div class="exempt-card" style="border-left-color:var(--success)"><div class="flex items-center gap-2"><span class="font-medium">${g}</span><span class="pill pill-green">Licensed ✓</span></div><div class="text-xs text-muted">Previously exempt → now holds full MAS licence</div></div>`).join('')}
+document.getElementById('gradBadge').textContent=GR.length+' since last snapshot';
+document.getElementById('gradNames').textContent=GR.join(', ')}
 
 // Notable
-!function(){const c=document.getElementById('nCards'),found=[],seen=new Set();
+let nN=9;function renderNotable(){const c=document.getElementById('nCards'),found=[],seen=new Set();
 for(const n of NOTABLE)for(const e of L){if(e.name.toLowerCase().includes(n.m)&&!seen.has(n.m)){
 seen.add(n.m);found.push({...e,icon:n.i,dn:n.l});break}}
-c.innerHTML=found.map(e=>{const ws=e.website?`<a href="${e.website}" target="_blank" class="text-xs text-primary">${e.website.replace(/https?:\/\//,'')}</a>`:'';
+c.innerHTML=found.slice(0,nN).map(e=>{const ws=e.website?`<a href="${e.website}" target="_blank" class="text-xs text-primary">${e.website.replace(/https?:\/\//,'')}</a>`:'';
 return`<div class="notable-card"><div class="flex items-center gap-2"><span class="text-lg">${e.icon}</span>
 <div><div class="font-medium text-sm">${e.dn}</div><div class="text-xs text-muted">${e.name}</div>
-${ws}</div></div></div>`}).join('')}();
+${ws}</div></div></div>`}).join('');
+const mc=document.getElementById('nMore');
+if(nN<found.length)mc.innerHTML=`<button class="show-more-btn" onclick="nN+=9;renderNotable()">Show more (${found.length-nN} remaining)</button>`;
+else mc.innerHTML=found.length>9?`<button class="show-more-btn" onclick="nN=9;renderNotable()">Collapse</button>`:''}
+renderNotable();
 
 // Exempt cards
 !function(){const grSet=new Set(GR.map(g=>g.toLowerCase()));
